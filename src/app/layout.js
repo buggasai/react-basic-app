@@ -2,7 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
  import {Header} from '@/components/header'
  import {Menu} from '@/components/menu'
-//import {Footer} from '@/components/footer'
+import {Footer} from '@/components/footer'
 import 'bootstrap/dist/css/bootstrap.css';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
           <div className='row'>
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </div>
         
