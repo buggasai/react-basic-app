@@ -1,4 +1,9 @@
+"use client"
+import { useState } from "react"
+import { appStore } from "../store"
+
 export const ReduxExample = ()=>{
+   
     return (
         <div>
             <A />
@@ -9,17 +14,27 @@ export const ReduxExample = ()=>{
 }
 
 const A = () =>{
+    const [name,setName] = useState('')
+    const fnName = ()=> {
+        debugger;
+        alert('Hi')
+        appStore.dispatch({type:'name_update',payload:name})
+    }
     return (
         <div className="container container-fluid m-2 border border-primary">
             <dl className="mt-2">
                 <dt> Name : </dt>
-                <dd> <input className="form-control" type="text" /> </dd>
-                <dd><button className="btn btn-success">Submit</button></dd>
+                <dd> <input className="form-control" type="text" onChange={(e)=>{setName(e.target.value)}}   /> </dd>
             </dl>
+            <button className="btn btn-success mb-2" onChange={fnName}>Submit</button>
         </div>
     )
 }
 const B = () => {
+    const [loc,setLoc] =useState('')
+    const fnLoc = ()=>{
+        appStore.dispatch({type:"loc_update",payload:loc})
+    }
     return (
             <div className="container container-fluid m-2 border border-primary">
                 <dl className="mt-2">
@@ -27,12 +42,10 @@ const B = () => {
                         Location :
                     </dt>
                     <dd>
-                        <input type="text" className="form-control" />
-                    </dd>
-                    <dd>
-                        <button className="btn btn-success">Submit</button>
+                        <input type="text" className="form-control" onChange={(e)=>{setLoc(e.target.value)}} />
                     </dd>
                 </dl>
+                <button className="btn btn-success mb-2" onChange={fnLoc}>Submit</button>
             </div>
     )
 }
