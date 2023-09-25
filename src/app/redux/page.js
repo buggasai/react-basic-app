@@ -16,8 +16,6 @@ export const ReduxExample = ()=>{
 const A = () =>{
     const [name,setName] = useState('')
     const fnName = ()=> {
-        debugger;
-        alert('Hi')
         appStore.dispatch({type:'name_update',payload:name})
     }
     return (
@@ -26,7 +24,7 @@ const A = () =>{
                 <dt> Name : </dt>
                 <dd> <input className="form-control" type="text" onChange={(e)=>{setName(e.target.value)}}   /> </dd>
             </dl>
-            <button className="btn btn-success mb-2" onChange={fnName}>Submit</button>
+            <button className="btn btn-success mb-2" onClick={fnName}>Submit</button>
         </div>
     )
 }

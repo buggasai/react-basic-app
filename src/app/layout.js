@@ -23,14 +23,12 @@ export default function RootLayout({ children }) {
               <Provider store={appStore}>
                   {children}
               </Provider>
-              
             </div>
           </div>
           <div className='row'>
             <Footer />
           </div>
         </div>
-        
       </body>
     </html>
   )
