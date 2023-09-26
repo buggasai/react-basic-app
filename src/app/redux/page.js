@@ -43,7 +43,7 @@ const B = () => {
                         <input type="text" className="form-control" onChange={(e)=>{setLoc(e.target.value)}} />
                     </dd>
                 </dl>
-                <button className="btn btn-success mb-2" onChange={fnLoc}>Submit</button>
+                <button className="btn btn-success mb-2" onClick={fnLoc}>Submit</button>
             </div>
     )
 }

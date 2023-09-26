@@ -10,6 +10,7 @@ export function Menu() {
               <li className={`mt-3 btn btn-danger`}><Link className='text-white' href='/about'>About</Link></li>
               <li className={`mt-3 btn btn-danger`}><Link className='text-white' href='/contact'>Contact Us</Link></li>
               <li className={`mt-3 btn btn-danger`}><Link className='text-white' href='/redux'>Redux</Link></li>
+              <li className={`mt-3 btn btn-danger`}><Link className='text-white' href='/multiReducer'>Multi Reducer</Link></li>
           </ul>
       </div>
     </div>
