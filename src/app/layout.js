@@ -5,7 +5,7 @@ import {Menu} from '@/components/menu'
 import {Footer} from '@/components/footer'
 import 'bootstrap/dist/css/bootstrap.css';
 import { Provider } from 'react-redux'
-import { appStore } from './store'
+import { appStore } from '@/store/appStore'
 
 export default function RootLayout({ children }) {
   return (

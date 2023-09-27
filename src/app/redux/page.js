@@ -1,9 +1,9 @@
 "use client"
 import { useState } from "react"
-import { appStore } from "../store"
+import { appStore } from "@/store/appStore"
+import { connect } from "react-redux"
 
 export const ReduxExample = ()=>{
-   
     return (
         <div>
             <A />
@@ -37,7 +37,7 @@ const B = () => {
             <div className="container container-fluid m-2 border border-primary">
                 <dl className="mt-2">
                     <dt>
-                        Location :
+                        Location : 
                     </dt>
                     <dd>
                         <input type="text" className="form-control" onChange={(e)=>{setLoc(e.target.value)}} />
@@ -51,7 +51,7 @@ const C = () =>{
     return (
         <div className="container container-fluid m-2 border border-primary">
             <dl className="mt-2">
-                <dt>Name : </dt>
+                <dt>Name :  </dt>
                 <dt>Location :</dt>
             </dl>
         </div>
