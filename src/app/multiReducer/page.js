@@ -1,8 +1,8 @@
 "use client"
+import React from 'react'
 import { photosActions } from '@/actions/photosActions';
 import { postAction } from '@/actions/postActions';
 import { userAction } from '@/actions/userAction'
-import React from 'react'
 import { useDispatch } from 'react-redux';
 
 
